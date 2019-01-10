@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import dwight from './assets/dwight.png'
+import dwightsound from './assets/Idiot.mp3'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`
+
+const audio = new Audio(dwightsound) 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container>
+        <img src={dwight} alt="ds" onClick={() => audio.play()} />
+        <h1> PRESS ME</h1>
+      </Container>
     );
   }
 }
