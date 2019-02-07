@@ -9,6 +9,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: #ffdb58;
   @media screen and (max-width: 480px) {
     img {
          width: 300px;
