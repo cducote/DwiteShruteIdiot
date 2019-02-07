@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import dwight from './assets/dwight.png'
-import dwightsound from './assets/Idiot.mp3'
+import dwight from './assets/d.png'
+import dwightsound from './assets/newidiot.mov'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -9,6 +9,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  @media screen and (max-width: 480px) {
+    img {
+         width: 300px;
+    }
+}
 `
 
 const audio = new Audio(dwightsound) 
@@ -18,7 +23,6 @@ class App extends Component {
     return (
       <Container>
         <img src={dwight} alt="ds" onClick={() => audio.play()} />
-        <h1> PRESS ME</h1>
       </Container>
     );
   }
