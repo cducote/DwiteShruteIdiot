@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dwight from './assets/d.png'
-import mike from './assets/mike.png'
-import andy from './assets/andy.png'
+import mike from './assets/mikeScott.png'
+import andy from './assets/andyBernard.png'
 import dwightsound from './assets/dwitesound.mov'
 import andySound from './assets/andysound.mp4'
 import mikeSound from './assets/mikesound.mp4'
@@ -20,6 +20,7 @@ const Container = styled.div`
 }
 `
 const Navbar = styled.div`
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +67,7 @@ class App extends Component {
     let head;
     if (dwiteSelected) {
       head = <Container>
-              <img src={dwight} alt="x" onClick={() => audio1.play()} />
+              <img src={dwight} alt="x" height="400px" onClick={() => audio1.play()} />
              </Container>
     } else if (parkourSelected) { 
       head = <Container>
@@ -74,7 +75,7 @@ class App extends Component {
               </Container>
     } else if (andySelected) { 
       head = <Container>
-                <img src={andy} alt="x" onClick={() => audio3.play()} />
+                <img src={andy} height="500px"alt="x" onClick={() => audio3.play()} />
               </Container>
     } else {
       head = <Container>
@@ -87,7 +88,7 @@ class App extends Component {
         {dwiteSelected ? (
           null
         ) : (
-          <img src={dwight} alt='x' height='150' onClick={this.handleDwight}/>
+          <img src={dwight} alt='x' height='125px' onClick={this.handleDwight}/>
         )}
         {parkourSelected ? (
           null
